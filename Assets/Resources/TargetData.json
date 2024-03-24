@@ -1,0 +1,116 @@
+{
+	"TargetList": [
+		{
+			"Name": "Level4-Escalator",
+			"FloorNumber": 0,
+			"Position": {
+				"x": 12.6,
+				"y": 0.00,
+				"z": 15.7
+			},
+			"Rotation": {
+				"x": 0.0,
+				"y": 0.0,
+				"z": 0.0
+			}
+		},
+		{
+			"Name": "ICSDI-R&D",
+			"FloorNumber": 0,
+			"Position": {
+				"x": 14.5,
+				"y": 0.00,
+				"z": 1.8
+			},
+			"Rotation": {
+				"x": 0.0,
+				"y": 0.0,
+				"z": 0.0
+			}
+		},
+		{
+			"Name": "Lab-A",
+			"FloorNumber": 0,
+			"Position": {
+				"x": 13.2,
+				"y": 0.00,
+				"z": -12.4
+			},
+			"Rotation": {
+				"x": 0.0,
+				"y": 0.0,
+				"z": 0.0
+			}
+		},
+		{
+			"Name": "Lab-B",
+			"FloorNumber": 0,
+			"Position": {
+				"x": 1.8,
+				"y": 0.00,
+				"z": -10
+			},
+			"Rotation": {
+				"x": 0.0,
+				"y": -90.0,
+				"z": 0.0
+			}
+		},
+		{
+			"Name": "Lab-A",
+			"FloorNumber": 0,
+			"Position": {
+				"x": -25.1,
+				"y": 0.00,
+				"z": -10.2
+			},
+			"Rotation": {
+				"x": 0.0,
+				"y": 0.0,
+				"z": 0.0
+			}
+		},
+		{
+			"Name": "Level4-WashRoom",
+			"FloorNumber": 0,
+			"Position": {
+				"x": 1.4,
+				"y": 0.00,
+				"z": 12.2
+			},
+			"Rotation": {
+				"x": 0.0,
+				"y": 180.0,
+				"z": 0.0
+			}
+		},
+		{
+			"Name": "Lab-M/Lab-D",
+			"FloorNumber": 0,
+			"Position": {
+				"x": -7,
+				"y": 0.00,
+				"z": 0.7
+			},
+			"Rotation": {
+				"x": 0.0,
+				"y": 0.0,
+				"z": 0.0
+			}
+		},
+		{
+			"Name": "Lib-ServerRoom",
+			"FloorNumber": 0,
+			"Position": {
+				"x": -1.2,
+				"y": 0.00,
+				"z": 0.7
+			},
+			"Rotation": {
+				"x": 0.0,
+				"y": 0.0,
+				"z": 0.0
+			}
+		}
+	]
+}
