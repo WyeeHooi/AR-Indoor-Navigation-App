@@ -11,6 +11,9 @@ public class PathLineVisualisation : MonoBehaviour {
     [SerializeField]
     private Slider navigationYOffset;
 
+    [SerializeField]
+    private float lineWidth = 0.1f;
+
     private NavMeshPath path;
     private Vector3[] calculatedPathAndOffset;
 
@@ -19,6 +22,8 @@ public class PathLineVisualisation : MonoBehaviour {
         AddOffsetToPath();
         AddLineOffset();
         SetLineRendererPositions();
+        line.startWidth = lineWidth;
+        line.endWidth = lineWidth;
     }
 
     private void AddOffsetToPath() {

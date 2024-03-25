@@ -1,6 +1,7 @@
 using Unity.Collections;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using ZXing;
@@ -17,18 +18,44 @@ public class QrCodeRecenter : MonoBehaviour {
     private TargetHandler targetHandler;
     [SerializeField]
     private GameObject qrCodeScanningPanel;
+    [SerializeField]
+    private Button toggleQRCodeScanButton;
 
     private Texture2D cameraImageTexture;
     private IBarcodeReader reader = new BarcodeReader(); // create a barcode reader instance
     private bool scanningEnabled = false;
+    private bool firstLaunch = true;
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         cameraManager.frameReceived += OnCameraFrameReceived;
+        toggleQRCodeScanButton.onClick.AddListener(ToggleScanning); // Register ToggleScanningPanel() to the button's click event
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         cameraManager.frameReceived -= OnCameraFrameReceived;
+        toggleQRCodeScanButton.onClick.RemoveListener(ToggleScanning); // Unregister ToggleScanningPanel() from the button's click event
     }
+
+    private void Start()
+    {
+        // Ensure the scanning panel is active on the first launch
+        if (firstLaunch)
+        {
+            qrCodeScanningPanel.SetActive(true);
+            firstLaunch = false;
+            scanningEnabled = true;
+        }
+    }
+
+    //private void OnEnable() {
+    //    cameraManager.frameReceived += OnCameraFrameReceived;
+    //}
+
+    //private void OnDisable() {
+    //    cameraManager.frameReceived -= OnCameraFrameReceived;
+    //}
 
     private void OnCameraFrameReceived(ARCameraFrameEventArgs eventArgs) {
 
